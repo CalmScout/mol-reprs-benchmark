@@ -26,5 +26,5 @@ To make the benchmarking more reliable, different classification algorithms are 
 
 ## Environment creation
 ```bash
-conda env create -f env.yml
+mamba env create -f env.yml
 ```
