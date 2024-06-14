@@ -50,4 +50,4 @@ class ClassificationMetrics:
         return matthews_corrcoef(y, y_pred)
     
     def __repr__(self):
-        return f"Target: {self.target_id}\nTrain MCC: {self.mcc_train},\nVal MCC: {self.mcc_val},\nTest MCC: {self.mcc_test}.\n"
+        return f"Target: {self.target_id}, train MCC: {self.mcc_train:.4f}, val MCC: {self.mcc_val:.4f}, test MCC: {self.mcc_test:.4f}.\n"
