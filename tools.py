@@ -46,7 +46,8 @@ def train_classifier(model, df_target, target_id):
     # df_val = df_target.filter(pl.col("split") == "validation")
     # df_test = df_target.filter(pl.col("split") == "test")
 
-    feature_cols = [f"f_{i+1:04d}" for i in range(2048)]
+    # feature_cols are all columns starting with "f_"
+    feature_cols = [f for f in df_target.columns if f.startswith("f_")]
     target_col = "class_label"
 
     X_train, y_train = df_train[feature_cols], df_train[target_col]
