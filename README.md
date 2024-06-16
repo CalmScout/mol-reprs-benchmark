@@ -28,3 +28,10 @@ To make the benchmarking more reliable, different classification algorithms are 
 ```bash
 mamba env create -f env.yml
 ```
+## Running MLFlow UI
+Activate python environment with installed `mlflow` package and launch the process:
+```bash
+cd mlflow
+mlflow ui --backend-store-uri sqlite:///mlflow.db
+```
+Click on the generated link (default: `http://127.0.0.1:5000`).
